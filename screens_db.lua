@@ -7,11 +7,13 @@ screens = {
 			return '--output ' .. xrandrOutput .. ' --off --output LVDS1 --auto'
 		end
 	},
-	['55250827610'] = {
+	['35050878429'] = {
 		['connected'] = function (xrandrOutput)
-			return '--output ' .. xrandrOutput .. ' --auto --above LVDS1'
+			return '--output ' .. xrandrOutput .. ' --primary --auto --left-of LVDS1'
 		end,
-		['disconnected'] = nil
+		['disconnected'] = function (xrandrOutput)
+			return '--output ' .. xrandrOutput .. ' --off --output LVDS1 --auto'
+		end
 	}
 }
 
