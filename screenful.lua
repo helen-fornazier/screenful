@@ -151,7 +151,8 @@ end
 
 local function disableOutput(out, changedCard)
 	local xrandrOut = getXrandrOutput(out, changedCard)
-	local screenId = getScreenId(out)
+	-- local screenId = getScreenId(out)
+	local screenId = ''
 	performConfiguredAction(screenId, 'disconnected', xrandrOut)
 	naughty.notify({ text='Output ' .. xrandrOut .. ' disconnected' })
 end
